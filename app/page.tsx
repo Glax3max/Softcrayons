@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { ReactNode } from "react";
 
 type PopupType = "courses" | "demo" | null;
 
@@ -49,6 +50,96 @@ const features = [
   "Learning with an expert in a classroom or online",
 ];
 const blogs = ["Spring Data Jpa", "Java8", "Multi Threading", "Multi Threading"];
+
+const trendingCourseColumns = [
+  [
+    "Advanced Java Training",
+    "MERN Training",
+    "Data Analytics using Python",
+    "Full Stack QA Training",
+    "DevOps with AWS",
+    "Cloud Computing Training",
+  ],
+  [
+    "Python Full Stack Development",
+    "Java Full Stack with DSA",
+    "UI/UX Design Professional",
+    "Digital Marketing Mastery",
+    "Graphic Designing Training",
+    "SAP FICO Certification",
+  ],
+  [
+    "AWS Solutions Architect",
+    "Microsoft Azure Fundamentals",
+    "Data Science with AI",
+    "Cybersecurity Essentials",
+    "DotNet Full Stack",
+    "Industrial Summer Training",
+  ],
+  [
+    "Machine Learning Bootcamp",
+    "React.js Advanced",
+    "SEO & Content Marketing",
+    "Software Testing Automation",
+    "Blockchain Basics",
+    "Global IT Certification Prep",
+  ],
+];
+
+const noidaCourseLinks = [
+  "Java Programming Training in Noida",
+  "Python Development in Noida",
+  "MERN Stack Course in Noida",
+  "Data Analytics in Noida",
+  "Digital Marketing in Noida",
+  "Graphic Design in Noida",
+  "AWS Training in Noida",
+  "Full Stack QA in Noida",
+  "UI/UX Design in Noida",
+  "DevOps Training in Noida",
+  "SAP MM Course in Noida",
+  "Cloud Computing in Noida",
+];
+
+const ghaziabadCourseLinks = [
+  "Java Full Stack Training in Ghaziabad",
+  "Python Data Science in Ghaziabad",
+  "Web Development Course in Ghaziabad",
+  "Digital Marketing Training in Ghaziabad",
+  "Software Testing in Ghaziabad",
+  "Graphic Designing in Ghaziabad",
+  "AWS Certification in Ghaziabad",
+  "MERN Development in Ghaziabad",
+  "DevOps Engineering in Ghaziabad",
+  "UI/UX Professional in Ghaziabad",
+  "SAP Training in Ghaziabad",
+  "Cloud Solutions in Ghaziabad",
+];
+
+const partnerNames = [
+  "Pearson",
+  "SAP",
+  "Microsoft Academy",
+  "Google Cloud",
+  "AWS",
+  "Kryterion",
+  "ACT",
+  "Languagecert",
+  "Skills For English",
+  "Salesforce",
+  "Oracle",
+];
+
+function FooterChevronLink({ children }: { children: ReactNode }) {
+  return (
+    <li className="text-sm">
+      <a href="#" className="inline-flex items-baseline gap-1.5 text-slate-300 transition hover:text-white">
+        <span className="font-semibold text-[#ff8c00]">»</span>
+        <span>{children}</span>
+      </a>
+    </li>
+  );
+}
 
 export default function Home() {
   const [activePopup, setActivePopup] = useState<PopupType>(null);
@@ -374,39 +465,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#07183f] py-14 text-slate-200">
-        <div className="mx-auto max-w-[1280px] px-4">
-          <div className="grid gap-8 lg:grid-cols-3">
-            <div>
-              <h4 className="text-xl font-bold text-[#f48220]">Trending Courses</h4>
-              <ul className="mt-3 space-y-2 text-sm">
-                <li>» Advanced Java Training</li>
-                <li>» Data Analytics using Python</li>
-                <li>» DevOps Training</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xl font-bold text-[#5db6ff]">Courses in Noida</h4>
-              <ul className="mt-3 grid grid-cols-2 gap-2 text-sm">
-                <li>» Graphics Design Training</li>
-                <li>» Cloud Training</li>
-                <li>» SEO Training</li>
-                <li>» Python Full Stack</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-xl font-bold text-[#d48dff]">Courses in Ghaziabad</h4>
-              <ul className="mt-3 grid grid-cols-2 gap-2 text-sm">
-                <li>» Digital Marketing</li>
-                <li>» Software Testing</li>
-                <li>» Cloud Computing</li>
-                <li>» Java Training</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="bg-white py-16">
         <div className="mx-auto max-w-[1280px] px-4">
           <h2 className="text-center text-5xl font-extrabold">
@@ -476,29 +534,219 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-[#07183f] py-14 text-slate-100">
-        <div className="mx-auto grid max-w-[1280px] gap-10 px-4 lg:grid-cols-3">
+      <footer className="bg-[#0a0e1a] py-14 text-slate-300">
+        <div className="mx-auto max-w-[1280px] px-6">
           <div>
-            <h4 className="text-3xl font-extrabold">
-              Soft<span className="text-[#f48220]">crayons</span>
-            </h4>
-            <p className="mt-4 text-sm text-slate-300">
-              Empowering professionals through transformative digital learning experiences.
+            <h3 className="border-b border-[#ff8c00] pb-2 text-lg font-bold text-[#ff8c00]">Trending Courses</h3>
+            <div className="mt-8 grid gap-8 md:grid-cols-4">
+              {trendingCourseColumns.map((col, i) => (
+                <ul key={i} className="space-y-2">
+                  {col.map((name) => (
+                    <FooterChevronLink key={name}>{name}</FooterChevronLink>
+                  ))}
+                </ul>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-10 md:grid-cols-2">
+            <div>
+              <h3 className="flex items-center gap-2 border-b border-[#ff8c00] pb-2 text-lg font-bold text-[#5db6ff]">
+                <span aria-hidden>📍</span>
+                Courses in Noida
+              </h3>
+              <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+                {noidaCourseLinks.map((label) => (
+                  <a key={label} href="#" className="text-slate-300 transition hover:text-white">
+                    {label}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="border-b border-[#ff8c00] pb-2 text-lg font-bold text-[#c084fc]">Courses in Ghaziabad</h3>
+              <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+                {ghaziabadCourseLinks.map((label) => (
+                  <a key={label} href="#" className="text-slate-300 transition hover:text-white">
+                    {label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 border-t border-white/10 pt-10">
+            <div className="grid gap-10 md:grid-cols-4">
+              <div>
+                <h4 className="text-xs font-bold uppercase tracking-wide text-white">FOLLOW US</h4>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {[
+                    { label: "Facebook", bg: "bg-[#1877f2]" },
+                    { label: "Instagram", bg: "bg-gradient-to-br from-[#f58529] via-[#dd2a7b] to-[#8134af]" },
+                    { label: "Twitter", bg: "bg-[#e02424]" },
+                    { label: "LinkedIn", bg: "bg-[#0a66c2]" },
+                    { label: "Pinterest", bg: "bg-[#bd081c]" },
+                    { label: "YouTube", bg: "bg-[#ff0000]" },
+                  ].map((s) => (
+                    <a
+                      key={s.label}
+                      href="#"
+                      aria-label={s.label}
+                      className={`grid h-10 w-10 place-items-center rounded-full text-xs font-bold text-white ${s.bg}`}
+                    >
+                      {s.label[0]}
+                    </a>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h4 className="text-xs font-bold uppercase tracking-wide text-white">FOR NEWSLETTER</h4>
+                <div className="mt-4 flex gap-2">
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    className="min-w-0 flex-1 rounded-md border border-white/10 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400"
+                  />
+                  <button
+                    type="button"
+                    className="grid h-10 w-10 shrink-0 place-items-center rounded bg-[#ff8c00] text-white"
+                    aria-label="Subscribe to newsletter"
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
+              <div>
+                <h4 className="text-xs font-bold uppercase tracking-wide text-white">FOR NOTIFICATIONS</h4>
+                <div className="mt-4 flex gap-2">
+                  <input
+                    type="tel"
+                    placeholder="Phone number"
+                    className="min-w-0 flex-1 rounded-md border border-white/10 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400"
+                  />
+                  <button
+                    type="button"
+                    className="grid h-10 w-10 shrink-0 place-items-center rounded bg-[#ff8c00] text-white"
+                    aria-label="Get notifications"
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
+              <div>
+                <h4 className="text-xs font-bold uppercase tracking-wide text-white">WE ACCEPT ONLINE PAYMENTS</h4>
+                <p className="mt-4 text-xs leading-relaxed text-slate-400">
+                  PhonePe · GPay · Paytm · Visa · Amex
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs sm:flex-row sm:items-start sm:justify-between">
+            <p>
+              © 2028{" "}
+              <span className="font-semibold text-[#ff8c00]">Softcrayons Tech Solutions</span>. All Rights Reserved.
+            </p>
+            <p className="max-w-xl text-slate-500">
+              All product names, logos, and brands are property of their respective owners. Use of these names does not
+              imply endorsement.
             </p>
           </div>
+        </div>
+      </footer>
+
+      <footer className="border-t border-white/5 bg-[#07132a] py-14 text-slate-300">
+        <div className="mx-auto grid max-w-[1280px] gap-10 px-6 lg:grid-cols-3">
           <div>
-            <h5 className="text-lg font-semibold text-[#f48220]">Quick Links</h5>
-            <ul className="mt-4 space-y-2 text-sm text-slate-300">
-              {["Home", "About Us", "Courses", "Blog", "Contact", "Placements"].map((item) => (
-                <li key={item}>• {item}</li>
-              ))}
+            <h4 className="text-2xl font-extrabold">
+              Soft<span className="text-[#f48220]">crayons</span>
+            </h4>
+            <p className="mt-4 text-sm leading-relaxed text-slate-400">
+              Empowering professionals through transformative digital learning experiences and industry-aligned
+              training programs.
+            </p>
+            <h5 className="mt-8 border-b border-[#ff8c00] pb-2 text-sm font-bold text-[#ff8c00]">Contact Information</h5>
+            <ul className="mt-4 space-y-3 text-sm">
+              <li className="flex gap-2">
+                <span className="text-[#5db6ff]" aria-hidden>
+                  🏢
+                </span>
+                <span>C-6 Sector 2, Noida, Uttar Pradesh</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[#c084fc]" aria-hidden>
+                  🏢
+                </span>
+                <span>Raj Nagar Extension, Ghaziabad, Uttar Pradesh</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[#22c55e]" aria-hidden>
+                  📞
+                </span>
+                <span>+91 8545012345</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[#f472b6]" aria-hidden>
+                  📞
+                </span>
+                <span>+91 8545012345</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[#38bdf8]" aria-hidden>
+                  ✉
+                </span>
+                <a href="mailto:info@softcrayons.com" className="hover:text-white">
+                  info@softcrayons.com
+                </a>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[#a78bfa]" aria-hidden>
+                  ✉
+                </span>
+                <a href="mailto:info@softcrayons.com" className="hover:text-white">
+                  info@softcrayons.com
+                </a>
+              </li>
+            </ul>
+            <h5 className="mt-8 border-b border-[#ff8c00] pb-2 text-sm font-bold text-[#ff8c00]">Our Branches</h5>
+            <ul className="mt-4 space-y-2 text-sm">
+              <li className="flex items-center gap-2">
+                <span aria-hidden>🏛</span>
+                Noida Branch
+              </li>
+              <li className="flex items-center gap-2">
+                <span aria-hidden>🏛</span>
+                Ghaziabad Branch
+              </li>
             </ul>
           </div>
           <div>
-            <h5 className="text-lg font-semibold text-[#f48220]">Contact</h5>
-            <p className="mt-4 text-sm text-slate-300">+91 8545012345</p>
-            <p className="text-sm text-slate-300">info@softcrayons.com</p>
-            <p className="mt-4 text-sm text-slate-300">C-6 Sector 2, Noida</p>
+            <h5 className="border-b border-[#ff8c00] pb-2 text-sm font-bold text-[#ff8c00]">Quick Links</h5>
+            <ul className="mt-4 space-y-2 text-sm">
+              <FooterChevronLink>Home</FooterChevronLink>
+              <FooterChevronLink>About Us</FooterChevronLink>
+              <li className="text-sm">
+                <button
+                  type="button"
+                  onClick={() => setActivePopup("courses")}
+                  className="inline-flex items-baseline gap-1.5 text-left text-slate-300 transition hover:text-white"
+                >
+                  <span className="font-semibold text-[#ff8c00]">»</span>
+                  <span className="underline-offset-2 hover:underline">Courses</span>
+                </button>
+              </li>
+              <FooterChevronLink>Blog</FooterChevronLink>
+              <FooterChevronLink>Contact</FooterChevronLink>
+              <FooterChevronLink>Placements</FooterChevronLink>
+            </ul>
+          </div>
+          <div>
+            <h5 className="border-b border-[#ff8c00] pb-2 text-sm font-bold text-[#ff8c00]">Our Partners</h5>
+            <ul className="mt-4 space-y-2">
+              {partnerNames.map((name) => (
+                <FooterChevronLink key={name}>{name}</FooterChevronLink>
+              ))}
+            </ul>
           </div>
         </div>
       </footer>
