@@ -1263,8 +1263,8 @@ export default function Home() {
       </div>
     </section>
 
-     <section className={`${inter.className} bg-[#f8fafc] py-20`}>
-      <div className="mx-auto max-w-[1320px] px-6">
+     <section className={`${inter.className} bg-[#f8fafc] py-20 `}>
+      <div className="mx-auto max-w-[1200px] px-6">
 
         {/* HEADING */}
         <div className="text-center">
@@ -1288,7 +1288,7 @@ export default function Home() {
           {media.map((item, i) => (
             <div
               key={i}
-              className="bg-[#f3f4f6] flex flex-col  overflow-hidden rounded-xl border border-[#e5e7eb] shadow-sm transition hover:shadow-md"
+              className="bg-[#f3f4f6] flex flex-col  overflow-hidden rounded-xl border border-[#e5e7eb] shadow-cyan-500/50 shadow-sm transition hover:shadow-md"
             >
               {/* IMAGE AREA */}
               <div className="flex h-[90px] items-center justify-center bg-white">
