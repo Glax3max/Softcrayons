@@ -1312,9 +1312,82 @@ export default function Home() {
       </div>
     </section>
 
+     <section className={`${inter.className} bg-[#f3ede8] py-20`}>
+      
+      <div className="bg-white mx-auto shadow-xl rounded-2xl  max-w-[1100px] px-6 py-12">
+      <div className="mx-auto max-w-[1000px] px-6">
+
+        <div className="grid overflow-hidden rounded-2xl bg-white  md:grid-cols-2">
+
+          {/* LEFT MAP */}
+          <div className="h-[420px] w-full">
+            <iframe
+              src="https://maps.google.com/maps?q=noida&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              className="h-full w-full border-0"
+              loading="lazy"
+            />
+          </div>
+
+          {/* RIGHT FORM */}
+          <div className="p-8">
+            <h2 className="text-[24px] font-semibold text-[#1f5aa8]">
+              Book Free Demo Class
+            </h2>
+
+            <p className="mt-2 text-[13px] text-[#6b7280] leading-5">
+              Let’s align our constellations! Reach out and let the magic of
+              collaboration illuminate our skies.
+            </p>
+
+            <form className="mt-6 grid grid-cols-2 gap-4">
+
+              <input
+                placeholder="Last Name"
+                className="h-10 rounded-md border border-[#8caee0] px-3 text-[13px] outline-none focus:border-[#1f5aa8]"
+              />
+
+              <input
+                placeholder="First Name"
+                className="h-10 rounded-md border border-[#8caee0] px-3 text-[13px] outline-none focus:border-[#1f5aa8]"
+              />
+
+              <input
+                placeholder="Email"
+                className="col-span-2 h-10 rounded-md border border-[#8caee0] px-3 text-[13px] outline-none focus:border-[#1f5aa8]"
+              />
+
+              <input
+                placeholder="Phone Number"
+                className="col-span-2 h-10 rounded-md border border-[#8caee0] px-3 text-[13px] outline-none focus:border-[#1f5aa8]"
+              />
+
+              <textarea
+                rows={4}
+                placeholder="Message"
+                className="col-span-2 rounded-md border border-[#8caee0] p-3 text-[13px] outline-none focus:border-[#1f5aa8]"
+              />
+
+              <button
+                type="button"
+                className="col-span-2 mt-2 flex items-center justify-center gap-2 rounded-md bg-[#1f4f8f] py-2.5 text-[13px] font-medium text-white transition hover:bg-[#163a6b]"
+              >
+                Start Your Journey
+                🚀
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+      </div>
+    </section>
+
   
       <section className="bg-[#07183f] py-14 text-slate-200">
-        <div className="mx-auto max-w-[1280px] px-4">
+        
+        <div className="mx-auto max-w-[1180px] px-4">
           <div className="grid gap-8 lg:grid-cols-3">
             <div>
               <h4 className="text-xl font-bold text-[#f48220]">Trending Courses</h4>
