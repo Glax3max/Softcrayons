@@ -123,25 +123,6 @@ const students = [
     img: "https://i.pravatar.cc/100?img=5",
   },
 ];
-
-const media = [
-  {
-    img: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Nucamp_logo.png",
-    title: "Will AI Replace Finance Jobs in Myanmar? Here’s What to Do in 2025",
-  },
-  {
-    img: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Oped_logo.png",
-    title: "Vaibhav Kakkar on IIM SKILLS: Industry-Relevant Training for Career Success",
-  },
-  {
-    img: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Mid-day_logo.png",
-    title: "Top 5 Best Financial Modeling and Valuation Courses for Investment Banking in India",
-  },
-  {
-    img: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Josh_logo.png",
-    title: "List of CAT Crash Courses to Pursue in 2024",
-  },
-];
 const testimonials = [
   {
     name: "Priya Patel",
@@ -298,6 +279,25 @@ const placements = [
     position: "DevOps Engineer",
     ctc: "14 LPA",
     img: "https://i.pravatar.cc/100?img=24",
+  },
+];
+
+const media = [
+  {
+    img: "https://dummyimage.com/120x40/ffffff/000000&text=Nucamp",
+    title: "Will AI Replace Finance Jobs in Myanmar? Here’s What to Do in 2025",
+  },
+  {
+    img: "https://dummyimage.com/120x40/ffffff/000000&text=Oped",
+    title: "Vaibhav Kakkar on IIM SKILLS: Industry-Relevant Training for Career Success",
+  },
+  {
+    img: "https://dummyimage.com/120x40/ffffff/000000&text=Mid-Day",
+    title: "Top 5 Best Financial Modeling and Valuation Courses for Investment Banking in India",
+  },
+  {
+    img: "https://dummyimage.com/120x40/ffffff/000000&text=Josh",
+    title: "List of CAT Crash Courses to Pursue in 2024",
   },
 ];
 const blogs = ["Spring Data Jpa", "Java8", "Multi Threading", "Multi Threading"];
@@ -1263,7 +1263,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section className={`${inter.className} bg-[#f8fafc] py-20`}>
+     <section className={`${inter.className} bg-[#f8fafc] py-20`}>
       <div className="mx-auto max-w-[1320px] px-6">
 
         {/* HEADING */}
@@ -1288,10 +1288,10 @@ export default function Home() {
           {media.map((item, i) => (
             <div
               key={i}
-              className="rounded-xl border border-[#e5e7eb] bg-white p-6 text-center shadow-sm transition hover:shadow-md"
+              className="bg-[#f3f4f6] flex flex-col  overflow-hidden rounded-xl border border-[#e5e7eb] shadow-sm transition hover:shadow-md"
             >
-              {/* LOGO */}
-              <div className="flex justify-center">
+              {/* IMAGE AREA */}
+              <div className="flex h-[90px] items-center justify-center bg-white">
                 <img
                   src={item.img}
                   alt="media"
@@ -1299,10 +1299,12 @@ export default function Home() {
                 />
               </div>
 
-              {/* TEXT */}
-              <p className="mt-6 text-[13px] leading-6 text-[#374151]">
-                {item.title}
-              </p>
+              {/* TITLE AREA */}
+              <div className="bg-[#f3f4f6] px-4 py-5  text-center">
+                <p className="text-[13px] font-semibold leading-6 text-[#374151]">
+                  {item.title}
+                </p>
+              </div>
             </div>
           ))}
         </div>
