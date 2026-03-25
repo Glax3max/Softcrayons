@@ -1,13 +1,24 @@
 "use client";
 import { FiSearch } from "react-icons/fi";
 import Image from "next/image";
-import { FiUsers, FiBookOpen, FiAward, FiGlobe } from "react-icons/fi";
+import { FiUsers, FiBookOpen, FiAward, FiGlobe,FiMapPin,  
+  FiMail, } from "react-icons/fi";
 import {
   FiCheckSquare,
   FiUser,
   FiTool,
 } from "react-icons/fi";
 import { FiBriefcase,FiCheck } from "react-icons/fi";
+import {
+  FiFacebook,
+  FiInstagram,
+  FiTwitter,
+  FiLinkedin,
+  FiYoutube,
+  FiSend,
+} from "react-icons/fi";
+
+import { FaPinterestP } from "react-icons/fa";
 
 import { useEffect, useState } from "react";
 import { Anton, Abel } from "next/font/google"
@@ -1385,67 +1396,428 @@ export default function Home() {
     </section>
 
   
-      <section className="bg-[#07183f] py-14 text-slate-200">
-        
-        <div className="mx-auto max-w-[1180px] px-4">
-          <div className="grid gap-8 lg:grid-cols-3">
-            <div>
-              <h4 className="text-xl font-bold text-[#f48220]">Trending Courses</h4>
-              <ul className="mt-3 space-y-2 text-sm">
-                <li>» Advanced Java Training</li>
-                <li>» Data Analytics using Python</li>
-                <li>» DevOps Training</li>
-              </ul>
+      <footer className={`${dmSans.className} bg-[#0b1f3f] text-white pt-16 pb-10`}>
+      <div className="mx-auto max-w-[1320px] px-15">
+
+        {/* TOP GRID */}
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+
+          {/* LEFT */}
+          <div>
+            <h2 className="text-[22px] font-bold">
+              <span className="text-[#f48220]">Soft</span>crayons
+            </h2>
+
+            <p className="mt-4 text-[13px] leading-6 text-[#cbd5e1] max-w-[320px]">
+              Empowering professionals through transformative digital learning
+              experiences and cutting-edge educational technologies.
+            </p>
+
+            {/* CONTACT */}
+            <div className="mt-6">
+              <p className="text-[14px] font-semibold text-[#f48220]">
+                Contact Information
+              </p>
+              <div className="mt-2 h-[2px] w-10 bg-[#f48220]" />
             </div>
-            <div>
-              <h4 className="text-xl font-bold text-[#5db6ff]">Courses in Noida</h4>
-              <ul className="mt-3 grid grid-cols-2 gap-2 text-sm">
-                <li>» Graphics Design Training</li>
-                <li>» Cloud Training</li>
-                <li>» SEO Training</li>
-                <li>» Python Full Stack</li>
-              </ul>
+
+            <div className="mt-5 space-y-4 text-[13px] text-[#cbd5e1]">
+
+              <div className="flex gap-3">
+                <FiMapPin className="mt-1 text-[#60a5fa]" />
+                <p>
+                  C-6 (First Floor) Sector 2 near Sector 15 Metro Station Noida,
+                  Uttar Pradesh 201301
+                </p>
+              </div>
+
+              <div className="flex gap-3">
+                <FiMapPin className="mt-1 text-[#60a5fa]" />
+                <p>
+                  A-693, Vasundhara Sector 14-A, Ghaziabad, Uttar Pradesh 201010
+                </p>
+              </div>
+
+              <div className="flex gap-3">
+                <FiPhone className="mt-1 text-[#60a5fa]" />
+                <p>+91 8545012345</p>
+              </div>
+
+              <div className="flex gap-3">
+                <FiPhone className="mt-1 text-[#60a5fa]" />
+                <p>+91 8545012345</p>
+              </div>
+
+              <div className="flex gap-3">
+                <FiMail className="mt-1 text-[#60a5fa]" />
+                <p>info@softcrayons.com</p>
+              </div>
+
+              <div className="flex gap-3">
+                <FiMail className="mt-1 text-[#60a5fa]" />
+                <p>info@softcrayons.com</p>
+              </div>
+
             </div>
-            <div>
-              <h4 className="text-xl font-bold text-[#d48dff]">Courses in Ghaziabad</h4>
-              <ul className="mt-3 grid grid-cols-2 gap-2 text-sm">
-                <li>» Digital Marketing</li>
-                <li>» Software Testing</li>
-                <li>» Cloud Computing</li>
-                <li>» Java Training</li>
-              </ul>
+
+            {/* BRANCHES */}
+            <div className="mt-8">
+              <p className="text-[14px] font-semibold text-[#f48220]">
+                Our Branches
+              </p>
+              <div className="mt-2 h-[2px] w-10 bg-[#f48220]" />
+            </div>
+
+            <div className="mt-4 space-y-2 text-[13px] text-[#cbd5e1]">
+              <div className="flex items-center gap-2">
+                 <div className="flex items-center">
+                    <span className="flex items-center text-[#f48220]">
+                      <FiChevronRight className="text-[12px]" />
+                      <FiChevronRight className="text-[12px] -ml-2" />
+                    </span>
+
+                    <span className="ml-2">Noida Branch</span>
+                  </div>
+              </div>
+              <div className="flex items-center gap-2">
+                 <div className="flex items-center">
+                    <span className="flex items-center text-[#f48220]">
+                      <FiChevronRight className="text-[12px]" />
+                      <FiChevronRight className="text-[12px] -ml-2" />
+                    </span>
+
+                    <span className="ml-2">Ghaziabad Branch</span>
+                  </div>
+              </div>
             </div>
           </div>
+
+          {/* QUICK LINKS */}
+          <div>
+            <p className="text-[14px] font-semibold text-white">
+              Quick Links
+            </p>
+            <div className="mt-2 h-[2px] w-full max-w-[200px] bg-gradient-to-r from-[#f48220] to-transparent" />
+
+            <div className="mt-6 space-y-3 text-[13px] text-[#cbd5e1]">
+              {["Home", "About Us", "Courses", "Blog", "Contact", "Placements"].map((item) => (
+                <div key={item} className="flex items-center gap-2 hover:text-white transition">
+                 <div className="flex items-center">
+                    <span className="flex items-center text-[#f48220]">
+                      <FiChevronRight className="text-[12px]" />
+                      <FiChevronRight className="text-[12px] -ml-2" />
+                    </span>
+
+                    <span className="ml-2">{item}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* PARTNERS */}
+          <div>
+            <p className="text-[14px] font-semibold text-white">
+              Our Partners
+            </p>
+            <div className="mt-2 h-[2px] w-full max-w-[200px] bg-gradient-to-r from-[#f48220] to-transparent" />
+
+            <div className="mt-6 grid grid-cols-1 gap-3 text-[13px] text-[#cbd5e1]">
+              {[
+                "Pearson",
+                "SAP",
+                "Microsoft Academy",
+                "Google Cloud",
+                "AWS",
+                "Kryterion",
+                "ACT",
+                "Languagecert",
+                "Skills For English",
+                "Salesforce",
+                "Oracle",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-2 hover:text-white transition">
+                  <div className="flex items-center">
+                    <span className="flex items-center text-[#f48220]">
+                      <FiChevronRight className="text-[12px]" />
+                      <FiChevronRight className="text-[12px] -ml-2" />
+                    </span>
+
+                    <span className="ml-2">{item}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
-      </section>
+
+        {/* DIVIDER */}
+        <div className="mt-12 border-t border-[#1e3a5f]" />
+
+        {/* TRENDING COURSES */}
+        <div className="mt-8">
+          <p className="text-[14px] font-semibold text-[#f48220]">
+            Trending Courses
+          </p>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4 text-[13px] text-[#cbd5e1]">
+            {[
+              "Advanced Java Training",
+              "MERN Training",
+              "Data Analytics using Python",
+              "Full Stack QA Training",
+              "Data Structures & Algorithms using JAVA",
+              "Java Full Stack with DSA",
+              "DevOps Training",
+              "Python using Data Analytics with Power BI",
+            ].map((item) => (
+              <div key={item} className="flex items-center gap-2 hover:text-white transition">
+                 <div className="flex items-center">
+                    <span className="flex items-center text-[#f48220]">
+                      <FiChevronRight className="text-[12px]" />
+                      <FiChevronRight className="text-[12px] -ml-2" />
+                    </span>
+
+                    <span className="ml-2">{item}</span>
+                  </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+     <div className="mt-12 border-t border-[#1e3a5f] pt-10">
+
+  {/* TRENDING COURSES */}
+  <div>
+    <p className="text-[14px] font-semibold text-[#f48220]">
+      Trending Courses
+    </p>
+    <div className="mt-2 h-[2px] w-12 bg-[#f48220]" />
+
+    <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4 text-[13px] text-[#cbd5e1]">
+      {[
+        "Advanced Java Training",
+        "MERN Training",
+        "Data Analytics using Python",
+        "Full Stack QA Training",
+        "Data Structures & Algorithms using JAVA",
+        "Java Full Stack with DSA",
+        "DevOps Training",
+        "Python using Data Analytics with Power BI",
+      ].map((item) => (
+        <div key={item} className="flex items-center">
+          <span className="flex items-center text-[#f48220]">
+            <FiChevronRight className="text-[11px]" />
+            <FiChevronRight className="text-[11px] -ml-[6px]" />
+          </span>
+          <span className="ml-2">{item}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* COURSES LOCATION */}
+  <div className="mt-12 grid gap-10 lg:grid-cols-2">
+
+    {/* NOIDA */}
+    <div>
+      <p className="flex items-center gap-2 text-[14px] font-semibold text-[#60a5fa]">
+        <FiMapPin /> Courses in Noida
+      </p>
+      <div className="mt-2 h-[2px] w-12 bg-[#f48220]" />
+
+      <div className="mt-6 grid gap-3 md:grid-cols-2 text-[13px] text-[#cbd5e1]">
+        {[
+          "Graphics Design Training",
+          "Cloud Training",
+          "ERP Training Certification",
+          "Python Full Stack Training",
+          "Adobe Illustrator",
+          "Machine Learning With Python",
+          "Core Python",
+          "CorelDRAW",
+          "Email Marketing Training",
+          "Affiliate Marketing",
+          "Struts Training",
+          "Network Programming Training",
+          "JAVA Servlet Training",
+          "RMI Training",
+          "CCNA Security",
+          "Programming Training",
+          "CAD Training",
+          "ITIL Training Certification",
+          "Adobe Photoshop",
+          "Adobe InDesign",
+          "Data Science Using Python",
+          "SEO Training",
+          "Social Media Optimization-SMO Training",
+          "Pay Per Click – PPC Training",
+          "Content Marketing",
+          "Spring Training",
+          "Hibernate Training",
+          "EJB Training",
+          "ASA Firewall",
+          "Check Point Firewall",
+        ].map((item) => (
+          <div key={item} className="flex items-center">
+            <span className="flex items-center text-[#f48220]">
+              <FiChevronRight className="text-[11px]" />
+              <FiChevronRight className="text-[11px] -ml-[6px]" />
+            </span>
+            <span className="ml-2">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* GHAZIABAD */}
+    <div>
+      <p className="flex items-center gap-2 text-[14px] font-semibold text-[#c084fc]">
+        <FiMapPin /> Courses in Ghaziabad
+      </p>
+      <div className="mt-2 h-[2px] w-12 bg-[#f48220]" />
+
+      <div className="mt-6 grid gap-3 md:grid-cols-2 text-[13px] text-[#cbd5e1]">
+        {[
+          "Digital Marketing Training in Ghaziabad",
+          "Software Testing Training in Ghaziabad",
+          "Advance Python Training in Ghaziabad",
+          "Cloud Computing Training in Ghaziabad",
+          "Java Training And Course in Ghaziabad",
+          "Python Training in Ghaziabad",
+          "iOS Development Training Ghaziabad",
+          "Core Java + Android + Kotlin",
+          "Android Development Training",
+          "Data Science Training in Ghaziabad",
+          "Data Analytics Using Python Training",
+          "JAVA Selenium Training in Ghaziabad",
+          "Manual Testing Training in Ghaziabad",
+          "Python Selenium Training in Ghaziabad",
+          "Web Designing Training in Ghaziabad",
+          "Network & Security",
+          "Advance JAVA training in Ghaziabad",
+          "Mobile Application Development",
+          "Artificial Intelligence training",
+          "PHP Training in Ghaziabad",
+          "Flutter Training in Ghaziabad",
+          "Core Java + Android + Flutter",
+          "Django Training in Ghaziabad",
+          "Core JAVA Training in Ghaziabad",
+          "Manual + Selenium Training",
+          "CCNA Security + CCNA Security+",
+          "Automation Testing Training",
+          "Angular JS Training in Ghaziabad",
+        ].map((item) => (
+          <div key={item} className="flex items-center">
+            <span className="flex items-center text-[#f48220]">
+              <FiChevronRight className="text-[11px]" />
+              <FiChevronRight className="text-[11px] -ml-[6px]" />
+            </span>
+            <span className="ml-2">{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+
+  {/* BOTTOM BAR */}
+  <div className="mt-12 border-t border-[#1e3a5f] pt-8 grid gap-8 lg:grid-cols-4 items-center">
+
+    {/* SOCIAL */}
+    <div>
+      <p className="text-[12px] font-semibold text-white mb-3">FOLLOW US</p>
+      <div className="flex gap-3 text-white">
+        <FiFacebook className="cursor-pointer hover:text-[#f48220]" />
+        <FiInstagram className="cursor-pointer hover:text-[#f48220]" />
+        <FiTwitter className="cursor-pointer hover:text-[#f48220]" />
+        <FiLinkedin className="cursor-pointer hover:text-[#f48220]" />
+        <FaPinterestP className="cursor-pointer hover:text-[#f48220]" />
+        <FiYoutube className="cursor-pointer hover:text-[#f48220]" />
+      </div>
+    </div>
+
+    {/* NEWSLETTER */}
+    <div>
+      <p className="text-[12px] font-semibold text-white mb-3">FOR NEWSLETTER</p>
+      <div className="flex">
+        <input className="w-full h-8 rounded-l bg-[#1e3a5f] px-3 text-[12px] outline-none text-white" />
+        <button className="h-8 w-10 flex items-center justify-center rounded-r bg-[#f48220] text-white">
+          <FiSend />
+        </button>
+      </div>
+    </div>
+
+    {/* NOTIFICATIONS */}
+    <div>
+      <p className="text-[12px] font-semibold text-white mb-3">FOR NOTIFICATIONS</p>
+      <div className="flex">
+        <input className="w-full h-8 rounded-l bg-[#1e3a5f] px-3 text-[12px] outline-none text-white" />
+        <button className="h-8 w-10 flex items-center justify-center rounded-r bg-[#f48220] text-white">
+          <FiSend />
+        </button>
+      </div>
+    </div>
+
+    {/* PAYMENTS */}
+<div>
+  <p className="text-[12px] font-semibold text-white mb-3">
+    WE ACCEPT ONLINE PAYMENTS
+  </p>
+
+  <div className="flex items-center ">
+
+    {/* PAYTM */}
+    <img
+      src="https://img.icons8.com/?size=100&id=68067&format=png&color=000000"
+      alt="Paytm"
+      className="h-6 object-contain"
+    />
+
+    {/* GOOGLE PAY */}
+    <img
+      src="https://img.icons8.com/?size=100&id=am4ltuIYDpQ5&format=png&color=000000"
+      alt="Google Pay"
+      className="h-6 object-contain"
+    />
+
+    {/* PHONEPE */}
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/7/71/PhonePe_Logo.svg"
+      alt="PhonePe"
+      className="h-6 object-contain"
+    />
+
+    {/* VISA */}
+    <img
+      src="https://img.icons8.com/?size=100&id=pFNd0FTuBU2Q&format=png&color=000000"
+      alt="Visa"
+      className="h-6 object-contain"
+    />
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" className="h-6" />
+  </div>
+</div>
+
+  </div>
+
+  {/* COPYRIGHT */}
+  <div className="mt-6 text-[12px] text-[#94a3b8] flex justify-between flex-wrap gap-4">
+    <p>
+      © 2026 <span className="text-[#f48220]">Softcrayons Tech Solutions</span>. All Rights Reserved.
+    </p>
+    <p className="text-[11px]">
+      The Certification name and logos are the trademark of their respective owners. Disclaimer
+    </p>
+  </div>
+
+</div>
+      </div>
+    </footer>
       
 
-      <footer className="bg-[#07183f] py-14 text-slate-100">
-        <div className="mx-auto grid max-w-[1280px] gap-10 px-4 lg:grid-cols-3">
-          <div>
-            <h4 className="text-3xl font-extrabold">
-              Soft<span className="text-[#f48220]">crayons</span>
-            </h4>
-            <p className="mt-4 text-sm text-slate-300">
-              Empowering professionals through transformative digital learning experiences.
-            </p>
-          </div>
-          <div>
-            <h5 className="text-lg font-semibold text-[#f48220]">Quick Links</h5>
-            <ul className="mt-4 space-y-2 text-sm text-slate-300">
-              {["Home", "About Us", "Courses", "Blog", "Contact", "Placements"].map((item) => (
-                <li key={item}>• {item}</li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h5 className="text-lg font-semibold text-[#f48220]">Contact</h5>
-            <p className="mt-4 text-sm text-slate-300">+91 8545012345</p>
-            <p className="text-sm text-slate-300">info@softcrayons.com</p>
-            <p className="mt-4 text-sm text-slate-300">C-6 Sector 2, Noida</p>
-          </div>
-        </div>
-      </footer>
+     
 
       {activePopup && (
         <div
